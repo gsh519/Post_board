@@ -103,10 +103,13 @@ while (true) {
   $num = trim(fgets(STDIN));
 
   if ($num === '1') {
+    //メッセージ投稿
     $posts[] = createPosts($link);
   } elseif ($num === '2') {
+    //メッセージ一覧
     listPosts($link);
   } elseif ($num === '9') {
+    //アプリケーション終了
     mysqli_close($link);
     break;
   }
