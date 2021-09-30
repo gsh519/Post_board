@@ -6,7 +6,7 @@ require_once __DIR__ . '/lib/mysqli.php';
 function listPosts($link)
 {
   $posts = [];
-  $sql = 'SELECT username, message FROM posts';
+  $sql = 'SELECT username, message, id FROM posts';
   $result = mysqli_query($link, $sql);
 
   while ($post = mysqli_fetch_assoc($result)) {
